@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas id='display' width="600" height="400" style='background-color:#000080'>
+
+</body>
+
+<script>
+    "use strict";
+
+    const canvas = document.getElementById('display')
+    const ctx = canvas.getContext('2d')
+
+    ctx.fillStyle = "green"
+    ctx.strokeStyle = "white"
+
+    ctx.arc(100, 100, 50, 0, Math.PI * 2)  //360 degrees in a cricle = PI*2 Radians
+    ctx.fill()
+
+    ctx.stroke()
+    ctx.beginPath()
+
+    ctx.ellipse(200, 300, 200, 50, .1, 0, Math.PI * 2)
+
+    ctx.fill()
+    ctx.stroke()
+
+    ctx.fillStyle = "red"
+    ctx.beginPath()
+
+    ctx.fillRect(300, 50, 100, 100)
+    ctx.strokeRect(300, 50, 100, 100)
+    ctx.fill()
+    ctx.stroke()
+
+    //draw a yellow triangle - outlined in black
+
+    ctx.fillStyle = "yellow"
+    ctx.strokeStyle = "black"
+
+    ctx.moveTo(20, 20);
+    ctx.lineTo(20, 100);
+    ctx.lineTo(70, 100);
+    ctx.lineTo(20, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    //draw a purple triangle - outlined in white
+
+    ctx.fillStyle = "purple"
+    ctx.strokeStyle = "white"
+
+
+    ctx.moveTo(300, 100);
+    ctx.lineTo(300, 200);
+    ctx.lineTo(400, 200);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+
+
+
+
+
+
+
+
+
+</script>
